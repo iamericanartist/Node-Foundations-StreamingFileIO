@@ -268,7 +268,7 @@ readStream.pipe(JSONStringify).pipe(process.stdout)
 ## Requirements
 
 Create a JavaScript file to act as a Node.js program named `09.js`. This program
-should read a file `09.json` and output to a file `09_Caps.json`. Use the second
+should read a file `09.json` and output to a file `09_caps.json`. Use the second
 command-line argument to declare the destination. You will not need to make your own `Readable` for this exercise. Simply use
 [`fs.createReadStream`][createreadstream] instead. In between, all letters
 should be capitalized with your own `Transform` stream. Then the data should be passed to your own `Writable` stream. The [`fs.appendFile`][appendfile] will be helpful
@@ -276,7 +276,7 @@ for this task.
 
 In addition, use some other method in the `fs` module make sure executing the
 program multiple times does not continue making a larger and larger
-`09.Caps.json` file.
+`09_Caps.json` file.
 
 Expected:
 
@@ -289,8 +289,8 @@ $ cat 09.json
     "BASIC": "Old"
   }
 }
-$ ./09.js 09_Caps.json
-$ cat 09_Caps.json
+$ ./09.js 09.json 09_caps.json
+$ cat 09_caps.json
 {
   "LANGUAGES": {
     "JAVASCRIPT": "AWESOME",
@@ -306,15 +306,9 @@ $ cat 09_Caps.json
 
 ## Additional Reading
 
-[EOF][eof]
-[EOT][eot]
-[FIN][fin]
-[Node.js Streams Handbook][streamhandbook]
-[Node.js streams][node.js streams]
-[`pipe`][pipe]
-[`createReadStream`][createreadstream]
-[Streams2][streams2]
-[`writeFile`][writefile]
+[EOF][eof] | [EOT][eot] | [FIN][fin] |
+[Node.js Streams Handbook][streamhandbook] | [Node.js streams][node.js streams]  
+[`pipe`][pipe] | [`createReadStream`][createreadstream] | [Streams2][streams2] | [`writeFile`][writefile]  
 
 [eof]: https://en.wikipedia.org/wiki/End-of-file
 [eot]: https://en.wikipedia.org/wiki/End-of-Transmission_character
